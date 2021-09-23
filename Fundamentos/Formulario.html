@@ -9,18 +9,18 @@
 <body>
     <center>
     <form id="customer">
-        <p>ID: <input type="number" name="constumer_id" size="10" required></p>
-        <p>ID Tienda: <input type="number" name="store_id" size="20" required></p>
-        <p>Nombre: <input type="text" name="first_name" size="20" required></p>
-        <p>Apellidos: <input type="text" name="last_name" size="40" required></p>
-        <p>Email: <input type="text" name="email" size="40" required></p>
+        <p>ID: <input type="number" id="constumer_id" name="constumer_id" size="10" required></p>
+        <p>ID Tienda: <input type="number" id="store_id" name="store_id" size="20" required></p>
+        <p>Nombre: <input type="text" id="first_name" name="first_name" minlength="2" maxlength="30" required></p>
+        <p>Apellidos: <input type="text" id="last_name"  name="last_name" size="40" ></p>
+        <p>Email: <input type="email" id="email" name="email" size="40" required></p>
         <p>Número Registro: <input type="number" name="address_id" size="10" required></p>
         <p>Actividad:
-            <input type="radio" name="active" value="true" checked > SI
-            <input type="radio" name="active" value="false" > NO 
+            <input type="radio" name="active" value="true" id="address_id" checked > SI
+            <input type="radio" name="active" value="false" id="address_id" > NO 
         </p>
-        <p>Fecha Alta: <input type="date" name="create_date" required></p>
-        <p>Ultima Actualización: <input type="date" name="last_update" required></p>
+        <p>Fecha Alta: <input type="date" name="create_date" id="create_date" required></p>
+        <p>Ultima Actualización: <input type="date" name="last_update"  id="last_update" required></p>
         
         <p>
             <input type="submit" value="Enviar">
