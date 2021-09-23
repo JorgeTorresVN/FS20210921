@@ -22,3 +22,20 @@ footer{
     font-style: inherit;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: lightgreen;
+}
+@media print {
+    input[type=submit], input[type=reset], div[type=back] {
+        display: none;
+    }
+    body > header {
+        display: none;
+    }
+    body {
+        font-size: 10pt;
+    }
+}
