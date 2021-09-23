@@ -1,0 +1,24 @@
+
+
+body{
+    background-color: rgb(226, 224, 221);
+    align-content:  center;
+}
+.title-msg {
+    color: var(--error-color, rgb(255, 94, 0));
+    font-size: 4em;
+    font: bold;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-content:right;
+  }
+footer{
+    background-color: ivory;
+}
+.menu{
+    font-size: 180%;
+    font-style: inherit;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
