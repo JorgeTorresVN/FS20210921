@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Theme/style.css">
     <title>Formulario</title>
 </head>
 <body>
-    <center>
-    <form id="customer">
-        <p>ID: <input type="number" id="constumer_id" name="constumer_id" size="10" required></p>
-        <p>ID Tienda: <input type="number" id="store_id" name="store_id" size="20" required></p>
-        <p>Nombre: <input type="text" id="first_name" name="first_name" minlength="2" maxlength="30" required></p>
-        <p>Apellidos: <input type="text" id="last_name"  name="last_name" size="40" ></p>
-        <p>Email: <input type="email" id="email" name="email" size="40" required></p>
-        <p>Número Registro: <input type="number" name="address_id" size="10" required></p>
-        <p>Actividad:
+    <div align=center>
+    <form id="customer" class="form" >
+        
+        <div>ID: <input type="number" id="constumer_id" name="constumer_id" size="10" required></div>
+        <div>ID Tienda: <input type="number" id="store_id" name="store_id" size="20" required></div>
+       <div>Nombre: <input type="text" id="first_name" name="first_name" minlength="2" maxlength="30" required></div>
+       <div>Apellidos: <input type="text" id="last_name"  name="last_name" size="40" ></div>
+       <div>Email: <input type="email" id="email" name="email" size="40" required></div>
+       <div>Número Registro: <input type="number" name="address_id" size="10" required></div>
+        <div>Actividad:
             <input type="radio" name="active" value="true" id="address_id" checked > SI
             <input type="radio" name="active" value="false" id="address_id" > NO 
-        </p>
-        <p>Fecha Alta: <input type="date" name="create_date" id="create_date" required></p>
-        <p>Ultima Actualización: <input type="date" name="last_update"  id="last_update" required></p>
+        </div>
         
-        <p>
+            <div>Fecha Alta: <input type="date" name="create_date" id="create_date" required></div>
+                <div> Ultima Actualización: <input type="date" name="last_update"  id="last_update" required>
+        </div>
+        <div> 
             <input type="submit" value="Enviar">
             <input type="reset" value="Borrar">
-        </p>
-    
-   
+       
+    </div>
+
     </form>
-</center>
-    <p><a href="Main.html" target="_blank">Volver al Menú</a></p>
+    </div>
+    <div class="print" id="back"> <a href="Main.html" target="_blank">Volver al Menú</a></div>
+
 </body>
 </html>

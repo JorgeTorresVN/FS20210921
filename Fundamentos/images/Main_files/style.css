@@ -1,20 +1,21 @@
 
+header{
+    background-color: lightgoldenrodyellow;
 
+}
 body{
     background-color: rgb(252, 250, 233);
     align-content:  center;
 }
 .title-msg {
     color: var(--error-color, rgb(255, 94, 0));
-    font-size:100%;
+    font-size:150%;
     font: bold;
-    
 }
 .box {
     display: flex;
-    flex-direction:row;
+    flex-direction: column;
     align-content:right;
-    background-color: rgb(252, 250, 233);
   }
 footer{
     background-color: ivory;
@@ -27,11 +28,8 @@ footer{
     font-size: 200%;
 }
 .nav-menu{
-    display: flex;
-    flex-direction:row;
-    align-content: space-around;
     background-color: rgb(252, 252, 184);
-    font-size: 50%;
+    font-size: 60%;
     font-style: inherit;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
@@ -52,8 +50,21 @@ footer{
         font-size: 10pt;
     }
 }
-@media screen and (max-width: 700px) {
-    .row, .navbar {   
-      flex-direction: column;
+.flex-container {
+    display: flex;
+    flex-direction: wrap;
+  }
+  
+  .flex-item-left {
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+    flex: 50%;
+  }
+  
+  @media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 50%;
     }
-}
+  }
