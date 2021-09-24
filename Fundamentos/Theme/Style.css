@@ -1,7 +1,7 @@
 
 
 body{
-    background-color: rgb(252, 250, 233);
+    background-color: rgb(252, 252, 252);
     align-content:  center;
 }
 .title-msg {
@@ -28,8 +28,8 @@ footer{
 }
 .nav-menu{
     display: flex;
-    flex-direction:row;
-    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
     background-color: rgb(252, 252, 184);
     font-size: 50%;
     font-style: inherit;
