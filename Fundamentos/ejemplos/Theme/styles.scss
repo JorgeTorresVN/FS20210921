@@ -1,0 +1,35 @@
+$color: red;
+$propiedad: color;
+$ancho: min-width;
+$ancho-definido: 100px;
+$modulo: articulo;
+%comun {
+    display: flex;
+    flex-flow: row wrap;
+}
+:root {
+    --error-color: rgb(163, 0, 0);
+    --principal-background-color: white;
+    --principal-text-color: rgb(0, 0, 0);
+    --principal-caption-color: rgb(0, 0, 116);
+    --secundario-background-color: black;
+    --secundario-text-color: white;
+    --secundario-caption-color: white;
+
+    body {
+        #{$propiedad}: $color;
+        div {
+            background-color: aqua;
+        }
+        background-color: var(--principal-background-color, white);
+    //    color: var(--principal-text-color, black);
+        margin: 0;
+        > header,  > footer  {
+            @extend %comun;
+            background-color: var(--secundario-background-color, black);;
+            color: var(--secundario-text-color, black);
+            padding: 10px;
+            align-items: stretch;
+        }
+    }
+}
