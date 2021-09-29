@@ -38,12 +38,18 @@ function ejercicio3(b){
 }
 }
 function Primos(num){
-    if (num == 0|| num==1) return false;
-    for(i = 2; i<num;i++){
-        if(num%i==0) return false;   
+    let cont=true;
+    for (let index = 2; index < num; index++) {
+        if(num % index==0){
+            cont=false;
+        }
+        
     }
-    return true;
+    
+    return cont;
 }
+
+
 function ejercicio6(){
 let cadena = prompt("Introduce una cadena:" ,0)
 let cad = cadena.split(" ").join("");
@@ -57,3 +63,47 @@ if(cad.toUpperCase == dac.toUpperCase){
     return console.log("No es Palindromo")
 }
 }
+function ejercicio5(dni) {
+    let num
+    let letr
+    let letras
+    let expresionDni
+   
+    expresionDni = /^\d{8}[a-zA-Z]$/;
+   
+    if(expresionDni.test (dni) == true){
+       num = dni.substr(0,dni.length-1);
+       letr = dni.substr(dni.length-1,1);
+       num = num % 23;
+       letras='TRWAGMYFPDXBNJZSQVHLCKET';
+       letras=letras.substring(num,num+1);
+      if (letras!=letr.toUpperCase()) {
+         alert('Dni erroneo, la letra del NIF no se corresponde');
+       }else{
+         alert('Dni correcto');
+       }
+    }else{
+       alert('Dni erroneo, formato no válido');
+     }
+  }
+           
+function ejercicio4(num){
+    let numerosPrimos=[];
+    let cont=0;
+    for (let index = 0; index < num; index++) {
+    let marca=false;
+    while (marca==false) {
+    if(cont!=0 && cont!=1){
+    if(Primos(cont)){
+    numerosPrimos.push(cont);
+     marca=true;
+                        }
+                }
+                    cont++;
+                }
+                
+            }
+        console.log(numerosPrimos)
+        return numerosPrimos;
+        }
+    
