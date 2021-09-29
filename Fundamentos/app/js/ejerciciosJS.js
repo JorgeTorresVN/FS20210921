@@ -10,17 +10,20 @@ function ejercicio2(max,min){
    
     for(i=0;i<9;i++){
     a = prompt("Introduce un número:" ,0)  
-    if(a != num){
-        switch(a){
-            case (a<num):
-                prompt("El número es mayor")
-                case (a>num):
-                prompt("El número es menor")
+    if(a == num){
+        alert("!HAS ACERTADO!, EL NUMERO CORRECTO ES: "+num)
+        return console.log("!HAS ACERTADO!, EL NUMERO CORRECTO ES: "+num)
+    }else{
+        
+            if(a<num){
+                alert("El número es mayor")
+            }
+            if(a>num){
+                alert("El número es menor")     
         }    
         
-    }else{
-         alert("!HAS ACERTADO!, EL NUMERO CORRECTO ES: "+num)
-         return console.log("!HAS ACERTADO!, EL NUMERO CORRECTO ES: "+num)
+    
+         
         }
          
     }
