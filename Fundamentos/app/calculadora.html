@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Theme/calculatora.css" rel="stylesheet" />
+    <script src="calculadora.js"></script>
+
+    <title>Calculadora</title>
+    <style>
+        .errorMsg {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="calculadora">
+        <tr>
+            <td><span id="resultado">0</span></td>
+        </tr>
+        <tr>
+            <td><button id="siete">7</button></td>
+            <td><button id="ocho">8</button></td>
+            <td><button id="nueve">9</button></td>
+            <td><button id="division">/</button></td>
+        </tr>
+        <tr>
+            <td><button id="cuatro">4</button></td>
+            <td><button id="cinco">5</button></td>
+            <td><button id="seis">6</button></td>
+            <td><button id="multiplicacion">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="uno">1</button></td>
+            <td><button id="dos">2</button></td>
+            <td><button id="tres">3</button></td>
+            <td><button id="resta">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="igual">=</button></td>
+            <td><button id="cero">0</button></td>
+            <td><button id="reset">C</button></td>
+            <td><button id="suma">+</button></td>
+        </tr>
+    </table>
+    <script>
+        let uno = document.getElementById("uno");
+        let dos = document.getElementById("dos");
+        let tres = document.getElementById("tres");
+        let cuatro = document.getElementById("cuatro");
+        let cinco = document.getElementById("cinco");
+        let seis = document.getElementById("seis");
+        let siete = document.getElementById("siete");
+        let ocho = document.getElementById("ocho");
+        let nueve = document.getElementById("nueve");
+        let cero = document.getElementById("cero");
+
+        let resultado = document.getElementById("resultado");
+        let suma = document.getElementById("suma");
+        let resta = document.getElementById("resta");
+
+        uno.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "1";
+        };
+        dos.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "2";
+        };
+        tres.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "3";
+        };
+        cuatro.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "4";
+        };
+        cinco.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "5";
+        };
+        seis.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "6";
+        };
+        siete.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "7";
+        };
+        ocho.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "8";
+        };
+        nueve.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "9";
+        };
+        cero.onclick = function (e) {
+            resultado.textContent = resultado.textContent + "0";
+        };
+    </script>
+</body>
+
+</html>

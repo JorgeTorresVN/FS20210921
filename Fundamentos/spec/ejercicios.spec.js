@@ -1,5 +1,5 @@
 // 'use strict' 
-fdescribe('Pruebas de los ejercicios', function(){
+/*fdescribe('Pruebas de los ejercicios', function(){
     describe('Ejercicio 2', function(){
         it('Numero', function(){
             let min = 0
@@ -27,3 +27,4 @@ fdescribe('Pruebas de los ejercicios', function(){
         }) 
         })
     })
+*/
