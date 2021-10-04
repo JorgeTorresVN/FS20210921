@@ -1,107 +1,30 @@
 .calculadora {
-    width:480px;
-    height:auto;
-    padding:10px 0;
-    margin: auto;
-    background:#232323;
-    border:#000 1px solid;
-    border-radius:7px;
-    -webkit-border-radius:7px;
-    -moz-border-radius:7px;
-    overflow: hidden;
-    text-align: center;
+  border: 3px rgb(0, 0, 0) ridge;
+  width: 250px;
+  text-align: center;
+  background-color: #dbf8d8;
+  border-radius: 5px;
 }
- 
-.screen {
-    width:424px;
-    height:93px;
-    margin: 12px auto 30px;
-    padding:15px 20px;
-    color:#c0c0c0;
-    text-align: right;
-    font-size: 3em;
-    letter-spacing: 3px;
-    overflow:hidden;
-    border:#000 1px solid;
-    border-radius:7px;
-    -webkit-border-radius:7px;
-    -moz-border-radius:7px;
-    box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
-    -webkit-box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
-    -moz-box-shadow:inset rgba(0,0,0,1) 0px 1px 4px, inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
-    background-image: -moz-linear-gradient(top, #3e3e3e 0%, #303030 100%);
-    background-image: -webkit-linear-gradient(top, #3e3e3e 0%, #303030 100%);
-    background-image: linear-gradient(top, #3e3e3e 0%, #303030 100%);
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    box-sizing:border-box;
+
+#textoPantalla {
+  width: 185px;
+  border: 2px black solid;
+  text-align: right;
+  position: relative;
+  left: 23px;
+  padding: 0px 5px;
+  background-color: white;
+  font-family: "courier new";
+  overflow: hidden;
+  border-radius: 15px;
 }
- 
-.button {
-    padding:0;
-    width:423px;
-    margin:auto;
-    overflow: hidden;
-    list-style: none;
+
+.calculadora [type="button"] {
+  width: 35px;
+  padding: 0;
 }
- 
-.buttons li {
-     display:inline;
-     float:left;
-     padding:0px;
-     margin-right:13px;
-     margin-bottom:10px;
-}
- 
-.buttons li:nth-child(4n) {
-    margin-right:0;
-}
- 
-.buttons a {
-    display:block;
-    width:95px;
-    height:68px;
-    padding:18px 0 12px;
-    color:#c0c0c0 !important;
-    font-family: "Myriad Pro", Arial, sans-serif;
-    font-size:1.6em;
-    font-weight: 500;
-    letter-spacing: -2px;
-    background-color:#2f2f2f;
-    border: #000 1px solid;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    text-align: center;
-    text-decoration: none;
-    text-shadow:#000 0px -1px 0px;
-    box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
-    -webkit-box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
-    -moz-box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
-    background-image:-moz-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-    background-image:-webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-    background-image:linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    box-sizing:border-box;
-    cursor: pointer;
-}
- 
-.buttons a:active {
-    box-shadow: inset rgba(0,0,0,0.5) 0px 2px 8px;
-    background-image:-moz-linear-gradient(top, #2f2f2f 0%, #363636 100%);
-    background-image:-webkit-linear-gradient(top, #2f2f2f 0%, #363636 100%);
-    background-image:linear-gradient(top, #2f2f2f 0%, #363636 100%);
-}
- 
-.tall {
-    height:151px !important;
-}
- 
-.wide {
-    width:205px !important;
-}
- 
-.shift {
-    margin-top:-78px;
+
+.calculadora input.largo {
+  color: red;
+  width: 60px;
 }
