@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggerService } from 'src/lib/my-core/services/logger.service';
 
 @Component({
   selector: 'app-calculadora',
@@ -14,7 +15,7 @@ export class CalculadoraComponent implements OnInit {
   resultado: boolean;
 
 
-  constructor() {
+  constructor(private log: LoggerService) {
     this.acum = 0;
     this.op = '+';
     this.pantalla = '0'
