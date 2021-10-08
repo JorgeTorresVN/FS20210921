@@ -16,12 +16,9 @@ import { MainModule } from './main';
 import { CommonServicesModule } from './common-services';
 import { SecurityModule } from './security';
 import { environment } from 'src/environments/environment';
-import { EjemplosComponent } from './ejemplos/ejemplos.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { CommonComponentModule } from './common-component';
 import { ClienteFormularioComponent } from './cliente-formulario/cliente-formulario.component';
-import { CommonComponentComponent } from './common-component/common-component.component';
-import { FormButtonsComponent } from './common-component/form-buttons/form-buttons.component';
-import { ShowErrorsMessagesComponent } from './common-component/show-errors-messages/show-errors-messages.component';
 
 @NgModule({
   declarations: [
@@ -29,17 +26,13 @@ import { ShowErrorsMessagesComponent } from './common-component/show-errors-mess
     DemosComponent,
     DinamicoComponent,
     CalculadoraComponent,
-    EjemplosComponent,
     FormularioComponent,
     ClienteFormularioComponent,
-    CommonComponentComponent,
-    FormButtonsComponent,
-    ShowErrorsMessagesComponent,
-
   ],
   imports: [
     BrowserModule, FormsModule,
-    AppRoutingModule, MyCoreModule, MainModule, CommonServicesModule, SecurityModule,CommonServicesModule,
+    AppRoutingModule, MyCoreModule, MainModule, CommonServicesModule, CommonComponentModule,
+    SecurityModule,
   ],
   providers: [
     LoggerService,

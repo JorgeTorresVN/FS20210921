@@ -46,6 +46,8 @@ export class ClienteViewModel {
     this.IsAdd = false;
   }
   public delete(){
+    if(!window.confirm('¿Seguro?')) return;
+    this.notify.add('Borrado');
 
   }
   public cancel(){
