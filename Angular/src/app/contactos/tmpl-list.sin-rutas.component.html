@@ -25,12 +25,15 @@
         </div>
       </td>
       <td class="align-middle text-end">
-        <div class="btn-group" role="group">
+        <app-botones (view)="VM.view(item.id)" (edit)="VM.edit(item.id)" (delete)="VM.delete(item.id)"></app-botones>
+        <!-- <div class="btn-group" role="group">
           <button class="btn btn-info" (click)="VM.view(item.id)"><i class="fas fa-eye"></i></button>
           <button class="btn btn-success" (click)="VM.edit(item.id)"><i class="fas fa-pen"></i></button>
           <button class="btn btn-danger" (click)="VM.delete(item.id)"><i class="far fa-trash-alt"></i></button>
-        </div>
+        </div> -->
       </td>
     </tr>
   </tbody>
 </table>
+<p-paginator [first]="VM.rowsPerPage*VM.page" [rows]="VM.rowsPerPage" [totalRecords]="VM.totalRows"
+    [pageLinkSize]="5" (onPageChange)="VM.load($event.page)"></p-paginator>

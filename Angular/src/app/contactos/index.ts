@@ -1,1 +1,2 @@
-export * from './contactos.module';
+export * from './modulo.module';
+export * from './componente.component';
