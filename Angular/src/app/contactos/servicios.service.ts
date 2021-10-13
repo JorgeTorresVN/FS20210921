@@ -38,7 +38,9 @@ export class ContactosDAOService extends RESTDAOService<any, any> {
     });
   }
 }
-
+@Injectable({
+  providedIn: 'root'
+})
 export class ContactosViewModelService {
   protected modo: ModoCRUD = 'list';
   protected listado: Array<any> = [];
