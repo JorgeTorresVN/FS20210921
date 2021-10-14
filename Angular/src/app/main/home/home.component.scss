@@ -26,7 +26,7 @@ p {
 }
 
 .toolbar {
-  //position: absolute;
+  // position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -36,25 +36,25 @@ p {
   background-color: #1976d2;
   color: white;
   font-weight: 600;
-}
 
-.toolbar img {
-  margin: 0 16px;
-}
+  img {
+    margin: 0 16px;
+  }
 
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 8px;
-}
+  #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
 
-.toolbar #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
-}
+  #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
 
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-  opacity: 0.8;
+  #twitter-logo:hover,
+  #youtube-logo:hover {
+    opacity: 0.8;
+  }
 }
 
 .content {

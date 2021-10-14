@@ -8,7 +8,7 @@ import { ModoCRUD } from '../base-code/tipos';
 import { NavigationService, NotificationService } from '../common-services';
 import { AUTH_REQUIRED } from '../security';
 
-export class Contactos {
+export class Libros {
   id: number = 0;
   tratamiento: string | null = null;
   nombre: string | null = null;
@@ -24,9 +24,9 @@ export class Contactos {
 @Injectable({
   providedIn: 'root'
 })
-export class ContactosDAOService extends RESTDAOService<any, any> {
+export class LibrosDAOService extends RESTDAOService<any, any> {
   constructor(http: HttpClient) {
-    super(http, 'contactos', { withCredentials: true, context: new HttpContext().set(AUTH_REQUIRED, true) });
+    super(http, 'libros', { withCredentials: true, context: new HttpContext().set(AUTH_REQUIRED, true) });
   }
   page(page: number, rows: number = 20): Observable<{ page: number, pages: number, rows: number, list: Array<any> }> {
     return new Observable(subscriber => {
@@ -46,19 +46,17 @@ export class ContactosDAOService extends RESTDAOService<any, any> {
   }
 }
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ContactosViewModelService {
+@Injectable()
+export class LibrosViewModelService {
   protected modo: ModoCRUD = 'list';
   protected listado: Array<any> = [];
   protected elemento: any = {};
   protected idOriginal: any = null;
-  protected listURL = '/contactos';
+  protected listURL = '/libros';
 
   constructor(protected notify: NotificationService,
     protected out: LoggerService, private navigation: NavigationService,
-    protected dao: ContactosDAOService, protected router: Router) { }
+    protected dao: LibrosDAOService, protected router: Router) { }
 
   public get Modo(): ModoCRUD { return this.modo; }
   public get Listado(): Array<any> { return this.listado; }
@@ -110,9 +108,9 @@ export class ContactosViewModelService {
     this.elemento = {};
     this.idOriginal = null;
     // this.list();
-    // this.router.navigateByUrl(this.listURL);
-    //this.load(this.page)
-    this.navigation.back()
+    this.router.navigateByUrl(this.listURL);
+    // this.load(this.page)
+    // this.navigation.back()
   }
 
   public send(): void {

@@ -22,12 +22,13 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it(`should have as title 'Angular'`, () => {
-    expect(component.title).toEqual('Angular');
+
+  it(`should have as title 'Hola mundo'`, () => {
+    expect(component.title).toEqual('Hola mundo');
   });
 
   it('should render title', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Angular app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Hola mundo app is running!');
   });
 });

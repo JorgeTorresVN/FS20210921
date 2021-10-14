@@ -51,7 +51,7 @@ export class BotonesComponent implements OnInit, OnDestroy {
 export class ContactosListComponent implements OnInit, OnDestroy {
   constructor(protected vm: ContactosViewModelService) { }
   public get VM(): ContactosViewModelService { return this.vm; }
-  ngOnInit(): void { }
+  ngOnInit(): void { this.vm.list()}
   ngOnDestroy(): void {  }
 }
 
@@ -63,7 +63,7 @@ export class ContactosListComponent implements OnInit, OnDestroy {
 export class ContactosAddComponent implements OnInit {
   constructor(protected vm: ContactosViewModelService) { }
   public get VM(): ContactosViewModelService { return this.vm; }
-  ngOnInit(): void { }
+  ngOnInit(): void { this.vm.add() }
 }
 
 @Component({
@@ -74,7 +74,7 @@ export class ContactosAddComponent implements OnInit {
 export class ContactosEditComponent implements OnInit, OnDestroy {
   constructor(protected vm: ContactosViewModelService) { }
   public get VM(): ContactosViewModelService { return this.vm; }
-  ngOnInit(): void { }
+  ngOnInit(): void { this.vm.edit }
   ngOnDestroy(): void { }
 }
 
