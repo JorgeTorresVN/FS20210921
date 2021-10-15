@@ -21,6 +21,7 @@ import { CommonComponentModule } from './common-component';
 import { ClienteFormularioComponent } from './cliente-formulario/cliente-formulario.component';
 import {  HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ContactosModule } from './contactos';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ContactosModule } from './contactos';
     CalculadoraComponent,
     FormularioComponent,
     ClienteFormularioComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule, FormsModule,

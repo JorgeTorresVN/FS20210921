@@ -4,8 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Observable, of } from 'rxjs';
 import { LoggerService } from 'src/lib/my-core';
 import { NotificationService } from '../common-services';
-
-import { Contactos, ContactosViewModelService } from './servicios.service';
+import { Blog, BlogViewModelService } from './servicios.service';
 
 export class DAOServiceMock<T, K> {
   constructor(private listado: Array<T>) { }
@@ -30,7 +29,7 @@ export class DAOServiceMock<T, K> {
   }
 }
 
-class ContactosDAOService extends DAOServiceMock<Contactos, number> {
+class BlogDAOService extends DAOServiceMock<Blog, number> {
   constructor() {
     super([
       {
@@ -84,19 +83,19 @@ class ContactosDAOService extends DAOServiceMock<Contactos, number> {
     ])
   }
 }
-fdescribe('ContactosViewModelService', () => {
-  let service: ContactosViewModelService;
-  let dao: ContactosDAOService;
+fdescribe('BlogViewModelService', () => {
+  let service: BlogViewModelService;
+  let dao: BlogDAOService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, RouterTestingModule],
       providers: [NotificationService, LoggerService,
-        { provide: ContactosDAOService, useClass: ContactosDAOService }
+        { provide: BlogDAOService, useClass: BlogDAOService }
       ],
     });
-    service = TestBed.inject(ContactosViewModelService);
-    dao = TestBed.inject(ContactosDAOService);
+    service = TestBed.inject(BlogViewModelService);
+    dao = TestBed.inject(BlogDAOService);
   });
 
   it('should be created', () => {
