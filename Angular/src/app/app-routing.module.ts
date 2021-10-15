@@ -5,16 +5,17 @@ import { ContactosAddComponent, ContactosEditComponent, ContactosListComponent, 
 import { DemosComponent } from './demos/demos.component';
 import { LibrosComponent } from './libros';
 import { HomeComponent, PageNotFoundComponent } from './main';
+import { AuthGuard, RegisterUserComponent } from './security';
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'inicio', component: HomeComponent },
-  { path: 'demos', component: DemosComponent },
-  { path: 'chisme/de/hacer/numeros', component: CalculadoraComponent },
+  { path: 'demos', component: DemosComponent, data: { pageTitle: 'Demos' }  },
+  { path: 'chisme/de/hacer/numeros', component: CalculadoraComponent, data: { pageTitle: 'Calculadora' } },
   { path: 'contactos', component: ContactosListComponent },
-  { path: 'contactos/add', component: ContactosAddComponent },
-  { path: 'contactos/:id/edit', component: ContactosEditComponent },
+  { path: 'contactos/add', component: ContactosAddComponent, canActivate: [ AuthGuard ] },
+  { path: 'contactos/:id/edit', component: ContactosEditComponent, canActivate: [ AuthGuard ] },
   { path: 'contactos/:id', component: ContactosViewComponent },
   { path: 'contactos/:id/:kk', component: ContactosViewComponent },
   { path: 'libros', children: [
@@ -26,6 +27,7 @@ const routes: Routes = [
   ]},
   { path: 'antonie/hasted', redirectTo: '/contactos/27'},
   { path: 'config', loadChildren: () => import('./config/config.module').then(mod => mod.ConfigModule)},
+  { path: 'registro', component: RegisterUserComponent },
   { path: '404.html', component: PageNotFoundComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
