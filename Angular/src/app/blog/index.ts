@@ -1,2 +1,2 @@
-export * from './blog.module';
-export * from './blog.component';
+export * from './modulo.module';
+export * from './componente.component';

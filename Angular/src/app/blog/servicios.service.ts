@@ -8,19 +8,6 @@ import { ModoCRUD } from '../base-code/tipos';
 import { NavigationService, NotificationService } from '../common-services';
 import { AuthService, AUTH_REQUIRED } from '../security';
 
-export class Blog {
-  id: number = 0;
-  tratamiento: string | null = null;
-  nombre: string | null = null;
-  apellidos: string | null = null;
-  telefono: string | null = null;
-  email: string | null = null;
-  sexo: string | null = null;
-  nacimiento: string | null = null;
-  avatar: string | null = null;
-  conflictivo: boolean = false;
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -54,11 +41,9 @@ export class BlogViewModelService {
   protected listado: Array<any> = [];
   protected elemento: any = {};
   protected idOriginal: any = null;
-  protected listURL = '/blog';
 
   constructor(protected notify: NotificationService, public auth: AuthService,
-    protected out: LoggerService, private navigation: NavigationService,
-    protected dao: BlogDAOService, protected router: Router) { }
+    private navigation: NavigationService, protected dao: BlogDAOService) { }
 
   public get Modo(): ModoCRUD { return this.modo; }
   public get Listado(): Array<any> { return this.listado; }
@@ -98,8 +83,6 @@ export class BlogViewModelService {
     );
   }
   public delete(key: any): void {
-    if (!window.confirm('¿Seguro?')) { return; }
-
     this.dao.remove(key).subscribe(
       data => this.list(),
       err => this.notify.add(err.message)

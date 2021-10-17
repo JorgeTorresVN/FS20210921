@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { ERROR_LEVEL, LoggerHTTPService, LoggerService, MyCoreModule } from 'src/lib/my-core';
-import { MainModule } from './main';
+import { AjaxWaitInterceptor, MainModule } from './main';
 import { CommonServicesModule } from './common-services';
 import { AuthInterceptor, SecurityModule } from './security';
 import { environment } from 'src/environments/environment';
@@ -21,7 +21,8 @@ import { CommonComponentModule } from './common-component';
 import { ClienteFormularioComponent } from './cliente-formulario/cliente-formulario.component';
 import {  HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ContactosModule } from './contactos';
-import { BlogComponent } from './blog/blog.component';
+import { BlogComponent } from './blog';
+
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { BlogComponent } from './blog/blog.component';
     CalculadoraComponent,
     FormularioComponent,
     ClienteFormularioComponent,
-    BlogComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule, FormsModule,
@@ -45,6 +46,7 @@ import { BlogComponent } from './blog/blog.component';
     { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
     { provide: LOCALE_ID, useValue: 'es-ES'},
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true, },
+    { provide: HTTP_INTERCEPTORS, useClass: AjaxWaitInterceptor, multi: true, },
   ],
   bootstrap: [AppComponent]
 })

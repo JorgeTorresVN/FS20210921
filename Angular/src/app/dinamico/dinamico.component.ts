@@ -5,6 +5,7 @@ import { CalculadoraComponent } from '../calculadora/calculadora.component';
 import { FormularioComponent } from '../formulario/formulario.component';
 import { ClienteFormularioComponent, ClienteViewModel } from '../cliente-formulario/cliente-formulario.component';
 import { ContactosComponent, CONTACTOS_COMPONENTES } from '../contactos/componente.component';
+import { BlogComponent } from '../blog';
 @Component({
   selector: 'app-dinamico',
   templateUrl: './dinamico.component.html',
@@ -18,6 +19,7 @@ export class DinamicoComponent implements OnInit {
     { texto: 'demos', icono: '', componente: DemosComponent },
     { texto: 'calculadora', icono: '', componente: CalculadoraComponent },
     { texto: 'inicio', icono: '', componente: HomeComponent },
+    { texto: 'blog', icono: '', componente: BlogComponent },
   ];
   actual = this.menu[0].componente;
 
