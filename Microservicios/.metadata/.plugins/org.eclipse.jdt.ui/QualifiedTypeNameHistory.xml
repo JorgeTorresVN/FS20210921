@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="com.examples.Calculadora"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Nested"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayNameGeneration"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayNameGenerator"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayNameGenerator.ReplaceUnderscores"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Nested"/>
+</qualifiedTypeNameHistroy>
