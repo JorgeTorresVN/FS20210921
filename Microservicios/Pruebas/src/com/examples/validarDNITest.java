@@ -3,6 +3,7 @@ package com.examples;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -30,11 +31,10 @@ class validarDNITest {
 	void tearDown() throws Exception {
 	}
 
-	@ParameterizedTest
+	@Test
 	@DisplayName("Prueba Validar DNI")
-	@CsvSource({"20583144P","23504824K"})
-	void testValidarDNI(String dni) {
-		assertTrue( validar.validarDNI(dni));
+	void testValidarDNI() {
+		assertTrue( validar.validarDNI("20583144P"));
 	}
 	@ParameterizedTest
 	@DisplayName("Prueba Validar DNI Error")
