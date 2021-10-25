@@ -7,10 +7,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.domains.entities.Category;
+import com.example.domains.entities.Language;
 
-public interface CategoryRepository extends JpaRepository<Category, Integer> {
-	<T> List<T> findByCategoryIdIsNotNull(Class<T> type);
-	<T> Iterable<T> findByCategoryIdIsNotNull(Sort sort, Class<T> type);
-	
-}
+public interface LanguageRepository  extends JpaRepository<Language, Integer> {
+		<T> List<T> findByLanguageIdIsNotNull(Class<T> type);
+		<T> Iterable<T> findByLanguageIdIsNotNull(Sort sort, Class<T> type);
+		
+	} 
+

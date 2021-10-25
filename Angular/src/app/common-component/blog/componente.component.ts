@@ -5,6 +5,7 @@ import { BlogViewModelService } from './servicios.service';
 @Component({
   selector: 'app-blog',
   templateUrl: './tmpl-anfitrion.component.html',
+  // providers: [ BlogViewModelService ],
   styleUrls: ['./componente.component.scss']
 })
 export class BlogComponent implements OnInit, OnDestroy {

@@ -33,7 +33,6 @@ import { BlogComponent } from './blog';
     CalculadoraComponent,
     FormularioComponent,
     ClienteFormularioComponent,
-    BlogComponent
   ],
   imports: [
     BrowserModule, FormsModule,
@@ -42,7 +41,6 @@ import { BlogComponent } from './blog';
   ],
   providers: [
     LoggerService,
-    // { provide: LoggerService, useClass: LoggerHTTPService },
     { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
     { provide: LOCALE_ID, useValue: 'es-ES'},
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true, },
