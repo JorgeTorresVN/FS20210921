@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="com.examples.Calculadora"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Nested"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayNameGeneration"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayNameGenerator"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayNameGenerator.ReplaceUnderscores"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.Nested"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="com.example.domains.contracts.services.ActorService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.example.domains.entities.dtos.ActorDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.data.crossstore.ChangeSetPersister.NotFoundException"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.support.ServletUriComponentsBuilder"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="javax.validation.Valid"/>
+    <fullyQualifiedTypeName name="com.example.exceptions.BadRequestException"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="java.net.URI"/>
 </qualifiedTypeNameHistroy>
