@@ -61,7 +61,6 @@ public class LanguageResource {
 	}
 
 	@PutMapping("/{id}")
-	// @ResponseStatus(HttpStatus.NO_CONTENT)
 	public Language update(@PathVariable int id, @Valid @RequestBody Language item)
 			throws BadRequestException, NotFoundException, InvalidDataException {
 		if (item == null)

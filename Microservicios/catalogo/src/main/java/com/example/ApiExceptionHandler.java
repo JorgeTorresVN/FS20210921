@@ -1,9 +1,5 @@
 package com.example;
 
-import java.io.Serializable;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -14,6 +10,11 @@ import com.example.exceptions.BadRequestException;
 import com.example.exceptions.DuplicateKeyException;
 import com.example.exceptions.InvalidDataException;
 import com.example.exceptions.NotFoundException;
+
+import java.io.Serializable;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.http.HttpStatus;
 
 @ControllerAdvice
@@ -64,6 +65,7 @@ public class ApiExceptionHandler {
 	public ErrorMessage invalidData(Exception exception) {
 		return new ErrorMessage("Datos invalidos", exception.getMessage());
 	}
+	
 
 	@ExceptionHandler({ HttpRequestMethodNotSupportedException.class })
 	@ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)

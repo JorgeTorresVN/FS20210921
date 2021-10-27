@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.domains.contracts.services.LanguageService;
 import com.example.domains.entities.Language;
@@ -11,7 +12,7 @@ import com.example.exceptions.DuplicateKeyException;
 import com.example.exceptions.InvalidDataException;
 import com.example.exceptions.NotFoundException;
 import com.example.infraestructure.repositories.LanguageRepository;
-
+@Service
 public class LanguageServiceImpl implements LanguageService{
 	@Autowired
 	private LanguageRepository dao;

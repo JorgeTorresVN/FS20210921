@@ -88,7 +88,16 @@ Content-Type: application/json
 
 delete  http://localhost:8001/actores/206
 
+##
+GET  http://localhost:8001/auto/
 
+##
+GET  http://localhost:8001/auto/countries
 
+##
+POST http://localhost:8001/auto/countries
+Content-Type: application/json
+
+{  "country": "Catalunia"  }
 
 
