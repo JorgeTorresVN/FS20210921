@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.springframework.data.crossstore.ChangeSetPersister.NotFoundException"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="com.example.infraestructure.repositories.LanguageRepository"/>
     <fullyQualifiedTypeName name="com.example.domains.entities.Film"/>
@@ -47,10 +46,12 @@
     <fullyQualifiedTypeName name="com.example.domains.core.services.contracts.DomainService"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonBackReference"/>
     <fullyQualifiedTypeName name="com.example.domains.entities.Country"/>
-    <fullyQualifiedTypeName name="org.springframework.data.rest.core.annotation.RepositoryRestResource"/>
     <fullyQualifiedTypeName name="springfox.documentation.oas.annotations.EnableOpenApi"/>
     <fullyQualifiedTypeName name="io.swagger.annotations.ApiModel"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.NotBlank"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
     <fullyQualifiedTypeName name="io.swagger.annotations.ApiModelProperty"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.data.rest.core.annotation.RepositoryRestResource"/>
 </qualifiedTypeNameHistroy>

@@ -76,6 +76,7 @@ public class CatalogoResource {
 	
 	@GetMapping(path = "/novedades")
 	public NovedadesDTO novedades(@ApiParam(example = "2019-01-01 00:00:00") @RequestParam(required = false) Timestamp fecha) {
+		// Timestamp fecha = Timestamp.valueOf("2019-01-01 00:00:00");
 		if(fecha == null)
 			fecha = Timestamp.from(Instant.now().minusSeconds(36000));
 		return new NovedadesDTO(filmSrv.novedades(fecha), artorSrv.novedades(fecha), categorySrv.novedades(fecha), languageSrv.novedades(fecha));

@@ -23,13 +23,13 @@ import lombok.NoArgsConstructor;
 @ApiModel(value = "PeliculaEditor", description = "Version editable de las peliculas")
 @Data @AllArgsConstructor @NoArgsConstructor
 public class FilmEditDTO {
-	@ApiModelProperty(value = "Id de la pelicula", required = true, accessMode = AccessMode.READ_ONLY)
+	@ApiModelProperty(value = "Identificador de la pelicula", required = true, accessMode = AccessMode.READ_ONLY)
 	private int filmId;
 	@ApiModelProperty(value = "Descripcion de la pelicula" )
 	private String description;
-	@ApiModelProperty(value = "Duración", required = true)
+	@ApiModelProperty(value = "Duración de la pelicula", required = true)
 	private int length;
-	@ApiModelProperty(value = "Clasificación ", allowableValues = "G, PG, PG-13, R, NC-17")
+	@ApiModelProperty(value = "Clasificación de la pelicula", allowableValues = "G, PG, PG-13, R, NC-17")
 	private String rating;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy")
 	private Short releaseYear;
@@ -44,9 +44,9 @@ public class FilmEditDTO {
 	private List<Integer> categories = new ArrayList<Integer>();
 
 	public Film update(Film target) {
-		target.setFilmId(filmId);
+		//target.setFilmId(filmId);
 		target.setDescription(description);
-		target.setLength(length);
+		if(target.getLength() != length) target.setLength(length);
 		target.setRating(rating);
 		target.setReleaseYear(releaseYear);
 		target.setRentalDuration(rentalDuration);
@@ -116,7 +116,10 @@ public class FilmEditDTO {
 				source.getLanguageId() == null ? null : new Language(source.getLanguageId()),
 				source.getLanguageVOId() == null ? null : new Language(source.getLanguageVOId())
 				);
-
+//		source.getActors().stream()
+//			.forEach(item -> rslt.addFilmActor(new Actor(item)));
+//		source.getCategories().stream()
+//			.forEach(item -> rslt.addFilmCategory(new Category(item)));
 		return rslt;
 	}
 
